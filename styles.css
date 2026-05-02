@@ -15,9 +15,14 @@ body {
 
 hr{border-color:#2D2421;
   background-color: #D35400;
-height: 3px;}
+height: 1px;
+}
 
-/* 2. Grouped Typography (Eliminates Repetition) */
+.bottom-line {
+  margin-top: 25px;
+}
+
+/* Eliminates Repetition */
 .dish-title, 
 .accent-title, 
 .main-header-small, 
@@ -37,7 +42,7 @@ a,
 /* 3. Containers */
 .container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: auto;
   text-align: center;
   padding: 40px 20px;
   animation: fadeInUp 0.8s ease-out; /* Apply the animation here */
@@ -47,8 +52,7 @@ a,
   text-align: center;
   padding: 40px 20px;
   background-color: #FCFBF9;
-  border-bottom: 2px solid #eaeaea;
-  
+  border-bottom: 2px solid #eaeaea;;
 }
 
 /* 4. Individual Component Tweaks */
@@ -92,7 +96,7 @@ a,
   margin-top: 20px;
 }
 
-/* 6. Interactive Elements */
+/* Interactive Elements for the links */
 a {
   text-decoration: none;
   font-weight: bold;
@@ -101,6 +105,8 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+a:visited {color: brown;}
 
 audio {
   margin-top: 15px;
@@ -185,3 +191,5 @@ audio {
   flex-shrink: 0;
   font-weight: bold;
 }
+
+.footer-note {font-size: 20px;}
