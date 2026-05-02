@@ -1,0 +1,185 @@
+/* 1. Variables & Global Styles */
+:root {
+  --accent-orange: #D35400;
+  --dark-espresso: #2D2421;
+  --main-font: 'Montserrat', sans-serif;
+  --script-font: 'Dancing Script', cursive;
+}
+
+body {
+  background-color: #f9f9f9;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: var(--dark-espresso);
+}
+
+/* 2. Grouped Typography (Eliminates Repetition) */
+.dish-title, 
+.accent-title, 
+.main-header-small, 
+.instruction-list > li::before {
+  font-family: var(--main-font);
+  text-transform: uppercase;
+}
+
+.dish-subtitle, 
+.accent-title, 
+a, 
+.footer-note, 
+.instruction-list > li::before {
+  color: var(--accent-orange);
+}
+
+
+
+.food {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #FCFBF9;
+  border-bottom: 2px solid #eaeaea;
+  
+}
+
+.container {
+  text-align:center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  animation: fadeInUp 0.8s ease-out; /* Applied the animation here */
+
+/* 4. Individual Component Tweaks */
+.dish-subtitle {
+  font-family: var(--script-font);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  transform: translateY(15px);
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+
+.dish-title {
+  font-weight: 900;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -2px;
+  margin: 0 0 20px 0;
+}
+
+.accent-title {
+  letter-spacing: 1px;
+  margin-top: 40px;
+}
+
+/* 5. Lists & Media */
+.stats-list, .ingredient-list, .instruction-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredient-list li, .instruction-list > li {
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.food img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+/* 6. Interactive Elements */
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+audio {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* testing out animations */
+.ingredient-list li {
+  transition: all 0.3s ease; /* This is the "Dynamic" part */
+  cursor: pointer;
+}
+
+.ingredient-list li:hover {
+  background-color: #FFF5EB; /* Very light orange tint */
+  padding-left: 10px; /* The text "flows" to the right slightly */
+  color: var(--accent-orange);
+}
+
+.instruction-list { transition: all 0.3s ease; /* This is the "Dynamic" part */
+  cursor: pointer;
+}
+
+.instruction-list li:hover {
+  background-color: #FFF5EB; /* Very light orange tint */
+  padding-left: 10px; /* The text "flows" to the right slightly */
+  color: var(--accent-orange);
+}
+
+/* 1. The Entrance Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+}
+
+/* 2. Grid Structure for Quick Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border-left: 4px solid var(--accent-orange);
+  transition: transform 0.3s ease; /* Hover flow */
+}
+
+.stat-card:hover {
+  transform: translateY(-5px); /* Card "pops" up on hover */
+  box-shadow: 0 10px 20px rgba(211, 84, 0, 0.1);
+}
+
+/* 3. Flexbox for Instructions & Ingredients */
+.instruction-step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.step-number {
+  background: var(--accent-orange);
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex; /* Flexbox to center the number */
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-weight: bold;
+}

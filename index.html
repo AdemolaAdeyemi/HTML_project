@@ -1,53 +1,63 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
   </head>
   <body>
+      <div class="food">
+        <!-- Replaced the single h1 with these two lines -->
+        <h1 class="dish-subtitle">The Celebration<br>Bowl</h1>
+        <p class="dish-title">Pounded Yam &<br>Egusi Soup</p>
+        
+        <figure>
+          <img src="./Assets/images/egusi background.jpg" alt="Pounded Yam & Egusi">
+          <figcaption>
+            <strong><em>You like what you see?</em></strong><br />
+            This is arguably the most prestigious duo in Nigerian cuisine.<br>
+            It features Pounded Yam (Iyan), paired with a rich, "lumpy" style Egusi Soup.
+          </figcaption>
+        </figure>
+      </div>
+      
+    <div class="container">
+    <!-- Quick Stats -->
+    <div class="stats-grid">
+  <div class="stat-card">
+    <p><strong>Prep Time</strong></p>
+    <p>25 Mins</p>
+  </div>
+  <div class="stat-card">
+    <p><strong>Cook Time</strong></p>
+    <p>45 Mins</p>
+  </div>
+  <div class="stat-card">
+    <p><strong>Servings</strong></p>
+    <p>4 People</p>
+  </div>
+</div>
+    <!-- How to Prepare -->
     <section>
-      <h1>Pounded Yam & Egusi Soup (The Celebration Bowl)</h1>
-      <figure>
-        <img src="./Assets/images/images.jpg" alt="Pounded Yam & Egusi">
-        <figcaption>
-          <strong><em>You like what you see?</em></strong
-          ><br />This is arguably the most prestigious duo in Nigerian cuisine.
-          It features Pounded Yam (Iyan), stretched and beaten until it reaches
-          a smooth, doughy, and stretchy consistency—paired with a rich, "lumpy"
-          style Egusi Soup.
-        </figcaption>
-      </figure>
-    </section>
-    <!--quick stats-->
-    <section>
-      <p1><u><mark>Quick Stats</u></mark></p1>
-      <ul>
-        <li>Prep Time: 25 minutes</li>
-        <li>Cook Time: 45 minutes</li>
-        <li>Servings: 4 people</li>
-        <li>
-          Difficulty: Intermediate (Requires some muscle for the yam and
-          patience for the melon "lumps")
-        </li>
-      </ul>
+      <aticle>
+      <h3 class="accent-title">How to prepare Pounded Yam & Egusi Soup</h3>
+      <p>Click <a href="./Ingredients/Ingredients.html">here</a> for the Ingredients List</p>
+      <p>Click <a href="/Instructions/Instructions.html">here</a> for Instructions</p>
+      </aticle>
     </section>
 
-<!--how to prepare-->
-    <section>
-      <h3>How to prepare Pounded Yam & Egusi Soup</h3>
-      <p>Click <a href="./Ingredients/Ingredients.html">here</a> to see Ingredients List</p>
-      <p>Click <a href="/Instructions/Instructions.html">here</a> to see Instructions on how to prepare</p>
-    </section>
+    <!-- Entertainment -->
     <article>
-      <!--adding a song for entertainment -->
-      <h3><em>What to do next?</em></h3>
-      <p>After serving, wash your hands and prepare to eat. You need to listen to some hip pop, to make the the body and soul enjoy the movement of the best celebration meal into your body</p>
-      <p>Click the player below to listen a song i picked for you to match your vibe</p>
+      <h3 class="accent-title">What to do next?</h3>
+      <p>Wash your hands and prepare to eat. Listen to some hip hop to let your soul enjoy the movement of the best celebration meal.</p>
+      <p>Click below for a song to match your vibe:</p>
+      <h2><em>BNXN (FKA BUJU) Omo Elewa</em></h2>
       <audio src="./Assets/Music/omo elewa - bnxn.mp4" controls></audio>
     </article>
-    <section>
-      <p><strong>EAT, LISTEN & JAIYE LOR!!!</strong></p>
+
+    <section class="footer-note">
+      <p><strong><em>EAT, LISTEN & JAIYE LOR!!!</em></strong></p>
     </section>
-  </body>
+</div>
 </html>
