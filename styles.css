@@ -13,6 +13,10 @@ body {
   color: var(--dark-espresso);
 }
 
+hr{border-color:#2D2421;
+  background-color: #D35400;
+height: 3px;}
+
 /* 2. Grouped Typography (Eliminates Repetition) */
 .dish-title, 
 .accent-title, 
@@ -153,7 +157,7 @@ audio {
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   border-left: 4px solid var(--accent-orange);
-  transition: transform 0.3s ease; /* Hover flow */
+  transition: all 0.3s ease; /* Hover flow */
 }
 
 .stat-card:hover {
